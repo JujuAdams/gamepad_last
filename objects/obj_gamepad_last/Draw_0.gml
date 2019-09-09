@@ -1,15 +1,18 @@
 //Creator info
 draw_text(10, 10, "gamepad_last() " + __GAMEPAD_LAST_VERSION + "\n@jujuadams " + __GAMEPAD_LAST_DATE);
 
+//Iterate over all devices...
 var _device = 0;
 repeat(gamepad_get_device_count())
 {
-    var _string = string(_device) + ": \"" + gamepad_get_description(_device) + "\": ";
-    
+    //Get the index/type/value of the last gamepad input for this device
     var _index = gamepad_last_get_index(_device);
     var _value = gamepad_last_get_value(_device);
     var _type  = gamepad_last_get_type(_device);
     
+    #region Build a string to describe the last gamepad input
+    
+    var _string = string(_device) + ": \"" + gamepad_get_description(_device) + "\": ";
     switch(_type)
     {
         case eGamepadLastType.Button:
@@ -48,8 +51,13 @@ repeat(gamepad_get_device_count())
             _string += "Unknown!";
         break;
     }
-   
     
+    _string += " (" + string(_index) + ")";
+    
+    #endregion
+    
+    //Draw the string!
     draw_text(10, 70 + 25*_device, _string);
+    
     ++_device;
 }

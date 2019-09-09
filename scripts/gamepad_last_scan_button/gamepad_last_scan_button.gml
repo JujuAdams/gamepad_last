@@ -1,3 +1,6 @@
+/// Scans the given device's buttons for input.
+/// Multiple buttons can be specified. Buttons defined last take precedence.
+/// 
 /// @param device
 /// @param button
 /// @param [button...]

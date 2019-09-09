@@ -1,3 +1,6 @@
+/// Scans the given device's axis for input.
+/// Any input below the threshold is ignored.
+/// 
 /// @param device
 /// @param axis
 /// @param threshold

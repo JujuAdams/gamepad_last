@@ -1,3 +1,6 @@
+/// Return the type of the last input from the given device.
+/// This type is defined by the eGamepadLastType enum (see below).
+/// 
 /// @param device
 
 enum eGamepadLastType
