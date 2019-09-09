@@ -1,0 +1,1 @@
+gamepad_last_clear();

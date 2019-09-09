@@ -1,0 +1,1 @@
+gamepad_last_scan_all(0.3);
