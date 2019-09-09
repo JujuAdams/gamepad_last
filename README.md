@@ -1,4 +1,4 @@
-<h1 align="center">Gamepad_Last 1.0.0</h1>
+<h1 align="center">gamepad_last 1.0.0</h1>
 
 ### @jujuadams
 
